@@ -1,8 +1,8 @@
-Flask==1.1.2
-pandas==1.2.3
+Flask==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.1.0
 pytrends==4.7.3
 statsmodels==0.12.2
 pmdarima==1.8.0
 matplotlib==3.3.4
 gunicorn
-Jinja2==2.11.3
