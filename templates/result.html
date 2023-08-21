@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .forecast {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .explanation {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: blue;
+        }
+        a {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+    <title>Search Forecasts</title>
+</head>
+<body>
+    <div class="container">
+<h3>Search Forecast for: {{ country }}</h3><br>
+        <h2>Search Term Forecasts for "{{ term }}"</h2>
+        <img src="data:image/png;base64,{{ result['plot_url'] }}" alt="Forecast Plot">
+        <div class="forecast">{{ result['forecast'] }}</div>
+        <div class="explanation">{{ result['explanation'] }}</div>
+        <a href="/">Search Again</a>
+    </div>
+</body>
+</html>
