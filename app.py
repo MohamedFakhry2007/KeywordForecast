@@ -112,4 +112,4 @@ def get_forecast(term, country):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port="0.0.0.0")
