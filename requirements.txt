@@ -1,0 +1,6 @@
+Flask==1.1.2
+pandas==1.2.3
+pytrends==4.7.3
+statsmodels==0.12.2
+pmdarima==1.8.0
+matplotlib==3.3.4
