@@ -4,3 +4,4 @@ pytrends==4.7.3
 statsmodels==0.12.2
 pmdarima==1.8.0
 matplotlib==3.3.4
+gunicorn
