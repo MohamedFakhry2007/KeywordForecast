@@ -112,4 +112,13 @@ def get_forecast(term, country):
 
 
 if __name__ == '__main__':
-    app.run(port="0.0.0.0")
+    import subprocess
+
+    gunicorn_cmd = [
+        'gunicorn',  # Path to gunicorn executable if necessary
+        '-b', '0.0.0.0:8000',  # Bind address and port
+        '--timeout', '160',  # Worker timeout in seconds
+        'app:app'  # Your Flask app module
+    ]
+
+    subprocess.run(gunicorn_cmd)
